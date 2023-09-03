@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import home from './home.css'
+import './home.css'
 import img from '../assets/XOsX.gif'
 import { useSelector, useDispatch } from 'react-redux';
 import { addToHistory } from "../actions";
@@ -41,8 +41,15 @@ export default function HomePage() {
                             onChange={(e) => setWord(e.target.value)}
                             autoFocus
                             placeholder="search for a word"
+                            style={{
+                                width: '200px',
+                                color: 'blue',
+                                fontSize: '20px',
+                                // Add any other input styles you want here
+                              }}
                         />
-                        <button onClick={() => meaning()} disabled={!word}>Search</button>
+
+                        <button onClick={() => meaning()} disabled={!word} style={{width:'100px', borderRadius: '6px'}}>Search</button>
 
                     </div>
                     {defination &&
