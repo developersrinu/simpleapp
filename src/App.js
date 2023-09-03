@@ -6,6 +6,7 @@ import HomePage from './HomePage/HomePage';
 import History from './History/History';
 import { Provider } from 'react-redux';
 import store from './store';
+import WordDetails from "./WordDetails"; 
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/history' element={<History />}></Route>
+          <Route path="/word/:word" component={WordDetails} />
+
         </Routes>
       </div>
     </Provider>
